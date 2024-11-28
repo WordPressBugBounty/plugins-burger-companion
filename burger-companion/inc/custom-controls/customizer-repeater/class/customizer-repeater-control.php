@@ -14,6 +14,7 @@ class Burger_Companion_Repeater extends WP_Customize_Control {
 	private $customizer_repeater_slide_align = false;
 	private $customizer_repeater_video_url_control = false;
 	private $customizer_repeater_image_control = false;
+	private $customizer_repeater_image2_control = false;
 	private $customizer_repeater_icon_control = false;
 	private $customizer_repeater_color_control = false;
 	private $customizer_repeater_text_control = false;
@@ -47,7 +48,10 @@ class Burger_Companion_Repeater extends WP_Customize_Control {
 		if ( ! empty( $args['customizer_repeater_image_control'] ) ) {
 			$this->customizer_repeater_image_control = $args['customizer_repeater_image_control'];
 		}
-		
+
+		if ( ! empty( $args['customizer_repeater_image2_control'] ) ) {
+			$this->customizer_repeater_image2_control = $args['customizer_repeater_image2_control'];
+		}
 
 		if ( ! empty( $args['customizer_repeater_icon_control'] ) ) {
 			$this->customizer_repeater_icon_control = $args['customizer_repeater_icon_control'];
@@ -61,7 +65,6 @@ class Burger_Companion_Repeater extends WP_Customize_Control {
 			$this->customizer_repeater_title_control = $args['customizer_repeater_title_control'];
 		}
 		
-
 		if ( ! empty( $args['customizer_repeater_subtitle_control'] ) ) {
 			$this->customizer_repeater_subtitle_control = $args['customizer_repeater_subtitle_control'];
 		}
@@ -119,7 +122,6 @@ class Burger_Companion_Repeater extends WP_Customize_Control {
 			$this->customizer_icon_container =   'inc/custom-controls/customizer-repeater/inc/icons';
 		}
 		
-
 		$allowed_array1 = wp_kses_allowed_html( 'post' );
 		$allowed_array2 = array(
 			'input' => array(
@@ -227,7 +229,7 @@ class Burger_Companion_Repeater extends WP_Customize_Control {
 						</div>
 						<div class="customizer-repeater-box-content-hidden">
 							<?php
-							$choice = $image_url = $icon_value = $title = $subtitle = $text = $text2 = $link2 = $link = $designation = $slide_align = $button = $open_new_tab = $shortcode = $repeater = $color = $video_url = '';
+							$choice = $image_url = $image_url2 = $icon_value = $title = $subtitle = $text = $text2 = $link2 = $link = $designation = $slide_align = $button = $open_new_tab = $shortcode = $repeater = $color = $video_url = '';
 							if(!empty($icon->id)){
 								$id = $icon->id;
 							}
@@ -236,6 +238,9 @@ class Burger_Companion_Repeater extends WP_Customize_Control {
 							}
 							if(!empty($icon->image_url)){
 								$image_url = $icon->image_url;
+							}
+							if(!empty($icon->image_url2)){
+								$image_url2 = $icon->image_url2;
 							}
 							if(!empty($icon->icon_value)){
 								$icon_value = $icon->icon_value;
@@ -337,7 +342,6 @@ class Burger_Companion_Repeater extends WP_Customize_Control {
 								), $button);
 							}
 							
-							
 							if($this->customizer_repeater_link_control){
 								$this->input_control(array(
 									'label' => apply_filters('burger_companion_repeater_input_labels_filter', esc_html__( 'Link','burger-companion' ), $this->id, 'customizer_repeater_link_control' ),
@@ -372,10 +376,12 @@ class Burger_Companion_Repeater extends WP_Customize_Control {
 							if($this->customizer_repeater_image_control == true){
 								$this->image_control($image_url, $choice, $burger_companion_limit, $it+1, $burger_companion_del_btn_id);
 							}
+							if($this->customizer_repeater_image2_control == true){
+								$this->image_control2($image_url2, $choice, $burger_companion_limit, $it+1, $burger_companion_del_btn_id);
+							}
 							if($this->customizer_repeater_icon_control == true){
 								$this->icon_picker_control($icon_value, $choice);
 							}
-							
 							
 							
 							
@@ -437,10 +443,12 @@ class Burger_Companion_Repeater extends WP_Customize_Control {
 					if ( $this->customizer_repeater_image_control == true ) {
 						$this->image_control();
 					}
+					if ( $this->customizer_repeater_image2_control == true ) {
+						$this->image_control2();
+					}
 					if ( $this->customizer_repeater_icon_control == true ) {
 						$this->icon_picker_control();
 					}
-					
 					
 					
 					if($this->customizer_repeater_color_control==true){
@@ -524,7 +532,6 @@ class Burger_Companion_Repeater extends WP_Customize_Control {
 						
 					}
 					
-					
 					if ( $this->customizer_repeater_shortcode_control == true ) {
 						$this->input_control( array(
 							'label' => apply_filters('burger_companion_repeater_input_labels_filter', esc_html__( 'Shortcode','burger-companion' ), $this->id, 'customizer_repeater_shortcode_control' ),
@@ -532,7 +539,6 @@ class Burger_Companion_Repeater extends WP_Customize_Control {
 							'type'  => apply_filters('burger_companion_repeater_input_types_filter', '', $this->id, 'customizer_repeater_shortcode_control' ),
 						) );
 					}
-					
 					
 					if ( $this->customizer_repeater_designation_control == true ) {
 						$this->input_control( array(
@@ -579,7 +585,6 @@ class Burger_Companion_Repeater extends WP_Customize_Control {
 				<?php
 			}
 		}
-		
 		
 		private function testimonila_check($value='no', $class='', $burger_companion_type_with_id=''){
 			?>
@@ -639,6 +644,35 @@ class Burger_Companion_Repeater extends WP_Customize_Control {
 					<?php esc_html_e('Image','burger-companion')?>
 				</span>
 				<input type="text" class="widefat custom-media-url <?php if($class="burger_companion_overlimit") { echo esc_attr('burger_companion-uploading-img');}?> <?php echo esc_attr($auto);?>" value="<?php echo esc_attr( $value ); ?>">
+				<input type="button" class="button button-secondary customizer-repeater-custom-media-button <?php if($class="burger_companion_overlimit") { echo esc_attr('burger_companion-uploading-img-btn');}?> <?php echo esc_attr($auto);?>" value="<?php esc_attr_e( 'Upload Image','burger-companion' ); ?>" />
+			</div>
+			<?php
+		}
+
+		private function image_control2($value = '', $show = '', $class='', $auto='', $sections=''){ 
+			if($auto==1)
+			{
+				$auto="one";
+			}
+
+			if($auto==2)
+			{
+				$auto="two";
+			}
+			if($auto==3)
+			{
+				$auto="three";
+			}
+			if($auto==4)
+			{
+				$auto="four";
+			}
+			?>
+			<div class="customizer-repeater-image2-control">
+				<span class="customize-control-title">
+					<?php esc_html_e('Slider Image','burger-companion')?>
+				</span>
+				<input type="text" class="widefat custom-media-url2 <?php if($class="burger_companion_overlimit") { echo esc_attr('burger_companion-uploading-img');}?> <?php echo esc_attr($auto);?>" value="<?php echo esc_attr( $value ); ?>">
 				<input type="button" class="button button-secondary customizer-repeater-custom-media-button <?php if($class="burger_companion_overlimit") { echo esc_attr('burger_companion-uploading-img-btn');}?> <?php echo esc_attr($auto);?>" value="<?php esc_attr_e( 'Upload Image','burger-companion' ); ?>" />
 			</div>
 			<?php
@@ -743,7 +777,6 @@ class Burger_Companion_Repeater extends WP_Customize_Control {
 			}
 		}
 	}
-
 
 /**
   * Filter to modify input label in repeater control
