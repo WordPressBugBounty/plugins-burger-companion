@@ -3,7 +3,7 @@
 Plugin Name: Burger Companion
 Plugin URI:
 Description: The Burger Companion plugin adds sections functionality to the Spintech Theme.
-Version: 7.3
+Version: 7.4
 Author: burgersoftware
 Author URI: https://burgersoftwares.com
 Text Domain: burger-companion
@@ -141,10 +141,25 @@ function burger_companion_activate() {
 	if( 'Astrocare' == $theme->name){
 		require_once('inc/astrocare/astrocare.php');
 	}
+	
+	if( 'Hotel Galaxy' == $theme->name){
+		require_once('inc/hotel-galaxy/hotel-galaxy.php');
+	}
+	
+	if( 'HotelPress' == $theme->name){
+		require_once('inc/hotelpress/hotelpress.php');
+	}
 }
 add_action( 'init', 'burger_companion_activate' );
 
-$theme = wp_get_theme();
+// cpt
+add_action( 'plugins_loaded', 'burger_companion_loaded' );
+function burger_companion_loaded() {	
+	$theme = wp_get_theme();
+	if($theme == 'Hotel Galaxy' || $theme == 'HotelPress' ){
+		require_once BURGER_COMPANION_PLUGIN_DIR . 'inc/hotel-galaxy/cpt/room-cpt.php';
+	}	
+}
 
 /**
  * The code during plugin activation.

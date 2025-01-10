@@ -1240,6 +1240,99 @@ if(jQuery('#exist_burger_companion_Astrocare_Payment').val()<4)
 }
 }
 
+// Hotel Galaxy Pro
+if(split_add_more_button_split=="Add New Deta")
+{
+
+ if(jQuery('#exist_burger_companion_Hotel_Galaxy_Details, #exist_burger_companion_HotelPress_Details').val()>=2)
+ {
+   jQuery(".customizer_Hotelgalaxy_details_upgrade_section").show();
+   return false;   
+}
+if(jQuery('#exist_burger_companion_Hotel_Galaxy_Details, #exist_burger_companion_HotelPress_Details').val()<2)
+{
+   var new_service_add_val=parseInt(jQuery('#exist_burger_companion_Hotel_Galaxy_Details, #exist_burger_companion_HotelPress_Details').val())+1;
+   jQuery('#exist_burger_companion_Hotel_Galaxy_Details, #exist_burger_companion_HotelPress_Details').val(new_service_add_val);  
+}
+}
+
+if(split_add_more_button_split=="Add New Icon")
+{
+
+ if(jQuery('#exist_burger_companion_Hotel_Galaxy_Icons, #exist_burger_companion_HotelPress_Icons').val()>=5)
+ {
+   jQuery(".customizer_Hotelgalaxy_social_icons_upgrade_section").show();
+   return false;   
+}
+if(jQuery('#exist_burger_companion_Hotel_Galaxy_Icons, #exist_burger_companion_HotelPress_Icons').val()<5)
+{
+   var new_service_add_val=parseInt(jQuery('#exist_burger_companion_Hotel_Galaxy_Icons, #exist_burger_companion_HotelPress_Icons').val())+1;
+   jQuery('#exist_burger_companion_Hotel_Galaxy_Icons, #exist_burger_companion_HotelPress_Icons').val(new_service_add_val);  
+}
+}
+
+if(split_add_more_button_split=="Add New Slid")
+{
+
+ if(jQuery('#exist_burger_companion_Hotel_Galaxy_Slider, #exist_burger_companion_HotelPress_Slider').val()>=3)
+ {
+   jQuery(".customizer_Hotelgalaxy_slide_upgrade_section").show();
+   return false;   
+}
+if(jQuery('#exist_burger_companion_Hotel_Galaxy_Slider, #exist_burger_companion_HotelPress_Slider').val()<3)
+{
+   var new_service_add_val=parseInt(jQuery('#exist_burger_companion_Hotel_Galaxy_Slider, #exist_burger_companion_HotelPress_Slider').val())+1;
+   jQuery('#exist_burger_companion_Hotel_Galaxy_Slider, #exist_burger_companion_HotelPress_Slider').val(new_service_add_val);  
+}
+}
+
+if(split_add_more_button_split=="Add New Abou")
+{
+
+ if(jQuery('#exist_burger_companion_Hotel_Galaxy_About, #exist_burger_companion_HotelPress_About').val()>=3)
+ {
+   jQuery(".customizer_Hotelgalaxy_about_upgrade_section").show();
+   return false;   
+}
+if(jQuery('#exist_burger_companion_Hotel_Galaxy_About, #exist_burger_companion_HotelPress_About').val()<3)
+{
+   var new_service_add_val=parseInt(jQuery('#exist_burger_companion_Hotel_Galaxy_About, #exist_burger_companion_HotelPress_About').val())+1;
+   jQuery('#exist_burger_companion_Hotel_Galaxy_About, #exist_burger_companion_HotelPress_About').val(new_service_add_val);  
+}
+}
+
+
+if(split_add_more_button_split=="Add New Serv")
+{
+
+ if(jQuery('#exist_burger_companion_Hotel_Galaxy_Service, #exist_burger_companion_HotelPress_Service').val()>=4)
+ {
+   jQuery(".customizer_Hotelgalaxy_service_upgrade_section").show();
+   return false;   
+}
+if(jQuery('#exist_burger_companion_Hotel_Galaxy_Service, #exist_burger_companion_HotelPress_Service').val()<4)
+{
+   var new_service_add_val=parseInt(jQuery('#exist_burger_companion_Hotel_Galaxy_Service, #exist_burger_companion_HotelPress_Service').val())+1;
+   jQuery('#exist_burger_companion_Hotel_Galaxy_Service, #exist_burger_companion_HotelPress_Service').val(new_service_add_val);  
+}
+}
+
+if(split_add_more_button_split=="Add New foot")
+{
+
+ if(jQuery('#exist_burger_companion_Hotel_Galaxy_footerbottom, #exist_burger_companion_HotelPress_footerbottom').val()>=2)
+ {
+   jQuery(".customizer_Hotelgalaxy_footer_bottom_upgrade_section").show();
+   return false;   
+}
+if(jQuery('#exist_burger_companion_Hotel_Galaxy_footerbottom, #exist_burger_companion_HotelPress_footerbottom').val()<2)
+{
+   var new_service_add_val=parseInt(jQuery('#exist_burger_companion_Hotel_Galaxy_footerbottom, #exist_burger_companion_HotelPress_footerbottom').val())+1;
+   jQuery('#exist_burger_companion_Hotel_Galaxy_footerbottom, #exist_burger_companion_HotelPress_footerbottom').val(new_service_add_val);  
+}
+}
+
+
 if (typeof th !== 'undefined') {
             /* Clone the first box*/
     var field = th.find('.customizer-repeater-general-control-repeater-container:first').clone( true, true );
@@ -1698,6 +1791,37 @@ if(split_delete_button_split=="Delete Socia")
 if(split_delete_button_split=="Delete Payme")
 {
     console.log( jQuery('#exist_burger_companion_Astrocare_Payment').val(parseInt(jQuery('#exist_burger_companion_Astrocare_Payment').val())-1));  
+}
+
+if(split_delete_button_split=="Delete Detai")
+{
+    console.log( jQuery('#exist_burger_companion_Hotel_Galaxy_Details, #exist_burger_companion_HotelPress_Details').val(parseInt(jQuery('#exist_burger_companion_Hotel_Galaxy_Details, #exist_burger_companion_HotelPress_Details').val())-1));  
+}
+
+if(split_delete_button_split=="Delete Icons")
+{
+    console.log( jQuery('#exist_burger_companion_Hotel_Galaxy_Icons, #exist_burger_companion_HotelPress_Icons').val(parseInt(jQuery('#exist_burger_companion_Hotel_Galaxy_Icons, #exist_burger_companion_HotelPress_Icons').val())-1));  
+}
+
+if(split_delete_button_split=="Delete Slide")
+{
+    console.log( jQuery('#exist_burger_companion_Hotel_Galaxy_Slider, #exist_burger_companion_HotelPress_Slider').val(parseInt(jQuery('#exist_burger_companion_Hotel_Galaxy_Slider, #exist_burger_companion_HotelPress_Slider').val())-1));  
+}
+
+if(split_delete_button_split=="Delete About")
+{
+    console.log( jQuery('#exist_burger_companion_Hotel_Galaxy_About, #exist_burger_companion_HotelPress_About').val(parseInt(jQuery('#exist_burger_companion_Hotel_Galaxy_About, #exist_burger_companion_HotelPress_About').val())-1));  
+}
+
+
+if(split_delete_button_split=="Delete Servi")
+{
+    console.log( jQuery('#exist_burger_companion_Hotel_Galaxy_Service, #exist_burger_companion_HotelPress_Service').val(parseInt(jQuery('#exist_burger_companion_Hotel_Galaxy_Service, #exist_burger_companion_HotelPress_Service').val())-1));  
+}
+
+if(split_delete_button_split=="Delete foote")
+{
+    console.log( jQuery('#exist_burger_companion_Hotel_Galaxy_footerbottom, #exist_burger_companion_HotelPress_footerbottom').val(parseInt(jQuery('#exist_burger_companion_Hotel_Galaxy_footerbottom, #exist_burger_companion_HotelPress_footerbottom').val())-1));  
 }
 
 });
