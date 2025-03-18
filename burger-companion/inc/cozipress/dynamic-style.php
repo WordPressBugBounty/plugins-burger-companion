@@ -64,8 +64,8 @@ if( ! function_exists( 'burger_com_cozipress_dynamic_style' ) ):
 		for ( $i = 1; $i <= 6; $i++ ) {	
 			$cozipress_heading_text_transform 	= get_theme_mod('cozipress_h' . $i . '_text_transform','inherit');
 			$cozipress_heading_font_style	 	= get_theme_mod('cozipress_h' . $i . '_font_style','inherit');
-			$cozipress_heading_font_size	 		 = get_theme_mod('cozipress_h' . $i . '_font_size');
-			$cozipress_heading_line_height		 	 = get_theme_mod('cozipress_h' . $i . '_line_height');
+			$cozipress_heading_font_size	    = get_theme_mod('cozipress_h' . $i . '_font_size');
+			$cozipress_heading_line_height	    = get_theme_mod('cozipress_h' . $i . '_line_height');
 
 			$output_css .=" h" . $i . "{ 
 				font-size: " .esc_attr($cozipress_heading_font_size). "px;

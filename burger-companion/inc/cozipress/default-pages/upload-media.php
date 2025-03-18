@@ -18,6 +18,9 @@ if( 'Sipri' == $theme->name){
 }elseif( 'Cozigo' == $theme->name){
 	$file 		= BURGER_COMPANION_PLUGIN_URL .'inc/cozigo/images/logo.png';
 	$ImagePath  = BURGER_COMPANION_PLUGIN_URL .'inc/cozigo/images';
+}elseif( 'CoraPress' == $theme->name){
+	$file 		= BURGER_COMPANION_PLUGIN_URL .'inc/corapress/images/logo.png';
+	$ImagePath  = BURGER_COMPANION_PLUGIN_URL .'inc/corapress/images';
 }else{
 	$file 		= BURGER_COMPANION_PLUGIN_URL .'inc/cozipress/images/logo.png';
 	$ImagePath  = BURGER_COMPANION_PLUGIN_URL .'inc/cozipress/images';

@@ -24,7 +24,7 @@ class Burger_Companion_Activator {
 				require BURGER_COMPANION_PLUGIN_DIR . 'inc/spintech/default-widgets/default-widget.php';
 			}
 			
-			if ( 'CoziPress' == $theme->name || 'Sipri' == $theme->name || 'Anexa' == $theme->name || 'CoziWeb' == $theme->name || 'CoziPlus' == $theme->name  || 'CoziBee' == $theme->name || 'Cozigo' == $theme->name){
+			if ( 'CoziPress' == $theme->name || 'Sipri' == $theme->name || 'Anexa' == $theme->name || 'CoziWeb' == $theme->name || 'CoziPlus' == $theme->name  || 'CoziBee' == $theme->name || 'Cozigo' == $theme->name || 'CoraPress' == $theme->name){
 				require BURGER_COMPANION_PLUGIN_DIR . 'inc/cozipress/default-pages/upload-media.php';
 				require BURGER_COMPANION_PLUGIN_DIR . 'inc/cozipress/default-pages/home-page.php';
 				require BURGER_COMPANION_PLUGIN_DIR . 'inc/cozipress/default-widgets/default-widget.php';

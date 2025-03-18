@@ -23,7 +23,7 @@ if($hs_info == '1'){
 						<div class="col-lg-3 col-md-6 col-12">
 							<aside class="widget widget-contact">
 								<div class="contact-area">
-									<?php if ( ! empty( $icon ) || ! empty( $image )):?>
+									<?php if ( ! empty( $icon ) || ! empty( $image )): ?>
 										<div class="contact-icon">
 										   <div class="contact-corn">
 												<?php if ( ! empty( $icon ) && ! empty( $image )){ ?>

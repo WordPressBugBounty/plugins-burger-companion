@@ -75,10 +75,19 @@ if ( ! function_exists( 'burger_cozipress_service' ) ) :
 							</div>
 						</div>
 					</div>
-					<div class="lg-shape1"><img src="<?php echo esc_url(BURGER_COMPANION_PLUGIN_URL); ?>/inc/cozipress/images/clipArt/shape1.png" alt="image"></div>
-					<div class="lg-shape2"><img src="<?php echo esc_url(BURGER_COMPANION_PLUGIN_URL); ?>/inc/cozipress/images/clipArt/shape2.png" alt="image"></div>
-					<div class="lg-shape3"><img src="<?php echo esc_url(BURGER_COMPANION_PLUGIN_URL); ?>/inc/cozipress/images/clipArt/shape3.png" alt="image"></div>
-					<div class="lg-shape4"><img src="<?php echo esc_url(BURGER_COMPANION_PLUGIN_URL); ?>/inc/cozipress/images/clipArt/shape4.png" alt="image"></div>
+					<?php
+					$current_theme = wp_get_theme();
+					if ($current_theme->get('Name') === 'CoraPress') { ?>
+						<div class="lg-shape1"><img src="<?php echo esc_url(BURGER_COMPANION_PLUGIN_URL); ?>/inc/corapress/images/clipArt/shape1.png" alt="image"></div>
+						<div class="lg-shape2"><img src="<?php echo esc_url(BURGER_COMPANION_PLUGIN_URL); ?>/inc/corapress/images/clipArt/shape2.png" alt="image"></div>
+						<div class="lg-shape3"><img src="<?php echo esc_url(BURGER_COMPANION_PLUGIN_URL); ?>/inc/corapress/images/clipArt/shape3.png" alt="image"></div>
+						<div class="lg-shape4"><img src="<?php echo esc_url(BURGER_COMPANION_PLUGIN_URL); ?>/inc/corapress/images/clipArt/shape4.png" alt="image"></div>
+					<?php } else { ?>
+						<div class="lg-shape1"><img src="<?php echo esc_url(BURGER_COMPANION_PLUGIN_URL); ?>/inc/cozipress/images/clipArt/shape1.png" alt="image"></div>
+						<div class="lg-shape2"><img src="<?php echo esc_url(BURGER_COMPANION_PLUGIN_URL); ?>/inc/cozipress/images/clipArt/shape2.png" alt="image"></div>
+						<div class="lg-shape3"><img src="<?php echo esc_url(BURGER_COMPANION_PLUGIN_URL); ?>/inc/cozipress/images/clipArt/shape3.png" alt="image"></div>
+						<div class="lg-shape4"><img src="<?php echo esc_url(BURGER_COMPANION_PLUGIN_URL); ?>/inc/cozipress/images/clipArt/shape4.png" alt="image"></div>
+					<?php } ?>
 				</section>
 				<?php	
 			}}

@@ -90,6 +90,10 @@ $selective_refresh = isset( $wp_customize->selective_refresh ) ? 'postMessage' :
 				<?php }elseif('Cozigo' == $theme->name){ ?>
 					
 				<a class="customizer_CoziPress_slider_upgrade_section up-to-pro" href="https://burgerthemes.com/cozigo-pro/" target="_blank" style="display: none;"><?php _e('More Slides Available in Cozigo Pro','cozipress'); ?></a>	
+				
+				<?php }elseif('CoraPress' == $theme->name){ ?>
+					
+				<a class="customizer_CoziPress_slider_upgrade_section up-to-pro" href="https://burgerthemes.com/corapress-pro/" target="_blank" style="display: none;"><?php _e('More Slides Available in CoraPress Pro','cozipress'); ?></a>
 
 			<?php }else{ ?>		
 			

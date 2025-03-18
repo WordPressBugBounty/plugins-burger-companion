@@ -10,6 +10,8 @@ if( 'Sipri' == $theme->name){
 	$footer_logo = BURGER_COMPANION_PLUGIN_URL .'inc/coziplus/images/logo.png';
 }elseif( 'Cozigo' == $theme->name){
 	$footer_logo = BURGER_COMPANION_PLUGIN_URL .'inc/cozigo/images/logo.png';
+}elseif( 'CoraPress' == $theme->name){
+	$footer_logo = BURGER_COMPANION_PLUGIN_URL .'inc/corapress/images/logo.png';
 }else{
 	$footer_logo = BURGER_COMPANION_PLUGIN_URL .'inc/cozipress/images/logo.png';
 }	
