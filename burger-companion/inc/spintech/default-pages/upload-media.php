@@ -12,6 +12,9 @@ if( 'Burgertech' == $theme->name){
 }elseif( 'Maxtech' == $theme->name){
 	$file = BURGER_COMPANION_PLUGIN_URL .'inc/maxtech/images/logo.png';
 	$ImagePath = BURGER_COMPANION_PLUGIN_URL .'inc/maxtech/images';
+}elseif( 'Softura' == $theme->name){
+	$file = BURGER_COMPANION_PLUGIN_URL .'inc/softura/images/logo.png';
+	$ImagePath = BURGER_COMPANION_PLUGIN_URL .'inc/softura/images';
 }else{
 	$file = BURGER_COMPANION_PLUGIN_URL .'inc/spintech/images/logo.png';
 	$ImagePath = BURGER_COMPANION_PLUGIN_URL .'inc/spintech/images';

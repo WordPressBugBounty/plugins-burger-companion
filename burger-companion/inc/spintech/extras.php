@@ -6,7 +6,7 @@
 function spintech_get_social_icon_default() {
 	return apply_filters(
 		'spintech_get_social_icon_default', json_encode(
-				 array(
+			array(
 				array(
 					'icon_value'	  =>  esc_html__( 'fa-facebook', 'spintech' ),
 					'link'	  =>  esc_html__( '#', 'spintech' ),
@@ -26,9 +26,6 @@ function spintech_get_social_icon_default() {
 		)
 	);
 }
-
-
-
 /*
  *
  * Footer Social Icon
@@ -36,7 +33,7 @@ function spintech_get_social_icon_default() {
 function spintech_get_footer_social_icon_default() {
 	return apply_filters(
 		'spintech_get_footer_social_icon_default', json_encode(
-				 array(
+			array(
 				array(
 					'icon_value'	  =>  esc_html__( 'fa-facebook', 'spintech' ),
 					'link'	  =>  esc_html__( '#', 'spintech' ),
@@ -82,16 +79,14 @@ function spintech_get_footer_social_icon_default() {
 	);
 }
 
-
-
 /*
  *
  * Footer Contact Info
  */
- function spintech_get_foot_info_default() {
+function spintech_get_foot_info_default() {
 	return apply_filters(
 		'spintech_get_foot_info_default', json_encode(
-				 array(
+			array(
 				array(
 					'title'           => esc_html__( 'Online 24/7', 'spintech' ),
 					'text'            => esc_html__( '70 975 975 70', 'spintech' ),
@@ -109,16 +104,45 @@ function spintech_get_footer_social_icon_default() {
 		)
 	);
 }
+/*
+ *
+ * Above Header Contents
+ */
+function spintech_get_abv_header_default() {
+	return apply_filters(
+		'spintech_get_abv_header_default', json_encode(
+			array(
+				array(
+					'title'           => esc_html__( 'Our Location:', 'spintech' ),
+					'text'            => esc_html__( 'California, TX 70240E', 'spintech' ),
+					'icon_value'      => 'fa-map-marker',
+					'id'              => 'customizer_repeater_abv_header_001',
+				),
+				array(
+					'title'           => esc_html__( 'Opening Hours:', 'spintech' ),
+					'text'            => esc_html__( 'Mon to Sat: 10 Am - 6 Pm', 'spintech' ),
+					'icon_value'      => 'fa-clock-o',
+					'id'              => 'customizer_repeater_abv_header_002',
+				),
+				array(
+					'title'           => esc_html__( 'Emerngecy Call:', 'spintech' ),
+					'text'            => esc_html__( '+163-2654-3654', 'spintech' ),
+					'icon_value'      => 'fa-phone',
+					'id'              => 'customizer_repeater_abv_header_003',
+				),
 
-
+			)
+		)
+	);
+}
 /*
  *
  * Slider Default
  */
- function spintech_get_slider_default() {
+function spintech_get_slider_default() {
 	return apply_filters(
 		'spintech_get_slider_default', json_encode(
-				 array(
+			array(
 				array(
 					'image_url'       => BURGER_COMPANION_PLUGIN_URL . 'inc/spintech/images/slider/img01.jpg',
 					'title'           => esc_html__( 'New Skills', 'spintech' ),
@@ -154,22 +178,21 @@ function spintech_get_footer_social_icon_default() {
 					'link2'	  =>  esc_html__( '#', 'spintech' ),
 					"slide_align" => "right", 
 					'id'              => 'customizer_repeater_slider_003',
-			
+
 				),
 			)
 		)
 	);
 }
 
-
 /*
  *
  * Info Default
  */
- function spintech_get_info_default() {
+function spintech_get_info_default() {
 	return apply_filters(
 		'spintech_get_info_default', json_encode(
-				 array(
+			array(
 				array(
 					'title'           => esc_html__( 'Expert Work', 'spintech' ),
 					'text'            => esc_html__( 'Lorem ipsum dolor sit amet, consectetur.', 'spintech' ),
@@ -204,16 +227,14 @@ function spintech_get_footer_social_icon_default() {
 	);
 }
 
-
-
 /*
  *
  * Service Default
  */
- function spintech_get_service_default() {
+function spintech_get_service_default() {
 	return apply_filters(
 		'spintech_get_service_default', json_encode(
-				 array(
+			array(
 				array(
 					'icon_value'       => 'fa-bar-chart',
 					'title'           => esc_html__( 'Web Development', 'spintech' ),
@@ -241,15 +262,14 @@ function spintech_get_footer_social_icon_default() {
 	);
 }
 
-
 /*
  *
  * Design & Develpement Default
  */
- function spintech_get_design_default() {
+function spintech_get_design_default() {
 	return apply_filters(
 		'spintech_get_design_default', json_encode(
-				 array(
+			array(
 				array(
 					'icon_value'       => 'fa-bar-chart',
 					'title'           => esc_html__( 'Flexible Office ', 'spintech' ),
@@ -296,15 +316,14 @@ function spintech_get_footer_social_icon_default() {
 	);
 }
 
-
 /*
  *
  * Funfact Default
  */
- function spintech_get_funfact_default() {
+function spintech_get_funfact_default() {
 	return apply_filters(
 		'spintech_get_funfact_default', json_encode(
-				 array(
+			array(
 				array(
 					'title'           => esc_html__( '254', 'spintech-pro' ),
 					'subtitle'           => esc_html__( '+', 'spintech-pro' ),
@@ -339,14 +358,12 @@ function spintech_get_footer_social_icon_default() {
 	);
 }
 
-
-
 /*
  *
  * Testimonial Default
  */
- 
- function spintech_get_testimonial_default() {
+
+function spintech_get_testimonial_default() {
 	return apply_filters(
 		'spintech_get_testimonial_default', json_encode(
 			array(
@@ -371,7 +388,7 @@ function spintech_get_footer_social_icon_default() {
 					'image_url'		  =>  BURGER_COMPANION_PLUGIN_URL . 'inc/spinsoft/images/testimonials/img03.png',
 					'id'              => 'customizer_repeater_testimonial_003',
 				)
-		    )
+			)
 		)
 	);
 }

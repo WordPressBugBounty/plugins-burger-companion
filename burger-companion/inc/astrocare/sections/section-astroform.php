@@ -17,7 +17,7 @@ if ( ! function_exists( 'burger_astrocare_astroform' ) ) :
 								</div>
 								<?php if( in_array( 'vedicastroapi/vedic-astro-api.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) { 
 
-									echo do_shortcode('[vedicastro-sade-sati-shortcode]');
+									echo do_shortcode('[vedicastro-kundali-shortcode]');
 								}else{
 									echo wp_kses_post("<p class='text-center'>Install and activate <strong>VedicAstroAPI</strong> plugin for Sade Sati Form.</p>");
 								} ?>

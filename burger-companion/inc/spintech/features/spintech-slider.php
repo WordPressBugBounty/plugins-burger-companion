@@ -88,6 +88,10 @@ function spintech_slider_setting( $wp_customize ) {
 
 					<a class="customizer_Spintech_slider_upgrade_section up-to-pro" href="https://burgerthemes.com/maxtech-pro/" target="_blank" style="display: none;"><?php _e('More Slides Available in Maxtech Pro','spintech'); ?></a>
 
+				<?php }elseif ( 'Softura' == $theme->name){ ?>
+
+					<a class="customizer_Spintech_slider_upgrade_section up-to-pro" href="https://burgerthemes.com/softura-pro/" target="_blank" style="display: none;"><?php _e('More Slides Available in Softura Pro','spintech'); ?></a>
+
 				<?php }else{ ?>	
 
 					<a class="customizer_Spintech_slider_upgrade_section up-to-pro" href="https://burgerthemes.com/spintech-pro/" target="_blank" style="display: none;"><?php _e('More Slides Available in Spintech Pro','spintech'); ?></a>				

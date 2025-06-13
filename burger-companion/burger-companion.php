@@ -3,7 +3,7 @@
 Plugin Name: Burger Companion
 Plugin URI:
 Description: The Burger Companion plugin adds sections functionality to the Spintech Theme.
-Version: 7.5
+Version: 7.6
 Author: burgersoftware
 Author URI: https://burgersoftwares.com
 Text Domain: burger-companion
@@ -152,6 +152,10 @@ function burger_companion_activate() {
 
 	if( 'CoraPress' == $theme->name){
 		require_once('inc/corapress/corapress.php');
+	}
+
+	if( 'Softura' == $theme->name){
+		require_once('inc/softura/softura.php');
 	}
 }
 add_action( 'init', 'burger_companion_activate' );
