@@ -1,8 +1,5 @@
 <?php
-$theme = wp_get_theme(); // gets the current theme
-if( 'Astrocare' == $theme->name){
-	$footer_logo = BURGER_COMPANION_PLUGIN_URL .'inc/astrocare/images/general/icon-footer.png';
-}	
+$footer_logo = BURGER_COMPANION_PLUGIN_URL .'inc/astrocare/images/general/icon-footer.png';
 $activate = array(
 	'astrocare-sidebar-primary' => array(
 		'search-1',

@@ -99,8 +99,11 @@ function astrocare_funfact_setting( $wp_customize ) {
 	class Astrocare_funfact_section_upgrade extends WP_Customize_Control {
 		public function render_content() { 
 		$theme = wp_get_theme(); // gets the current theme
-		if ( 'Astrocare' == $theme->name){
+		if ( 'Numerology' == $theme->name){
 			?>	
+			<a class="customizer_Astrocare_funfact_upgrade_section up-to-pro" href="<?php esc_url('https://burgerthemes.com/numerology-pro/');?>" target="_blank" style="display: none;"><?php _e('More Funfact Available in Numerology Pro','numerology'); ?></a>
+
+		<?php }else{ ?>		
 			<a class="customizer_Astrocare_funfact_upgrade_section up-to-pro" href="<?php esc_url('https://burgerthemes.com/astrocare-pro/');?>" target="_blank" style="display: none;"><?php _e('More Funfact Available in Astrocare Pro','astrocare'); ?></a>
 			
 			<?php

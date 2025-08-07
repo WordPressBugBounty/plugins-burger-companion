@@ -84,8 +84,8 @@ class Burger_Companion_Activator {
 				require BURGER_COMPANION_PLUGIN_DIR . 'inc/kundoo/default-pages/home-page.php';
 				require BURGER_COMPANION_PLUGIN_DIR . 'inc/kundoo/default-widgets/default-widget.php';
 			}
-
-			if ( 'Astrocare' == $theme->name ){
+			
+			if ( 'Astrocare' == $theme->name  || 'Numerology' == $theme->name){
 				require BURGER_COMPANION_PLUGIN_DIR . 'inc/astrocare/default-pages/upload-media.php';
 				require BURGER_COMPANION_PLUGIN_DIR . 'inc/astrocare/default-pages/home-page.php';
 				require BURGER_COMPANION_PLUGIN_DIR . 'inc/astrocare/default-widgets/default-widget.php';

@@ -1,8 +1,8 @@
 <?php 
-if ( ! function_exists( 'burger_astrocare_astroform' ) ) :
-	function burger_astrocare_astroform() {
+if ( ! function_exists( 'burger_numerology_astroform' ) ) :
+	function burger_numerology_astroform() {
 		$hs_astroform	= get_theme_mod('hs_astroform','1');	
-		$astroform_title = get_theme_mod('astroform_title','Know Your Moon Sign');
+		$astroform_title = get_theme_mod('astroform_title','Know Your Life Path Number');
 		if($hs_astroform == '1'){	
 			?>	
 			<section class="ast_searchbox_section ast_astro-slider-form">
@@ -17,9 +17,9 @@ if ( ! function_exists( 'burger_astrocare_astroform' ) ) :
 								</div>
 								<?php if( in_array( 'vedicastroapi/vedic-astro-api.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) { 
 
-									echo do_shortcode('[vedicastro-sade-sati-shortcode]');
+									echo do_shortcode('[vedicastro-numberology-shortcode]');
 								}else{
-									echo wp_kses_post("<p class='text-center'>Install and activate <strong>VedicAstroAPI</strong> plugin for Sade Sati Form.</p>");
+									echo wp_kses_post("<p class='text-center'>Install and activate <strong>VedicAstroAPI</strong> plugin for Numerology Form.</p>");
 								} ?>
 							</div>
 						</div>
@@ -29,7 +29,7 @@ if ( ! function_exists( 'burger_astrocare_astroform' ) ) :
 			<?php	
 		} } 
 	endif;
-	if ( function_exists( 'burger_astrocare_astroform' ) ) {
-		$section_priority = apply_filters( 'astrocare_section_priority', 12, 'burger_astrocare_astroform' );
-		add_action( 'astrocare_sections', 'burger_astrocare_astroform', absint( $section_priority ) );
+	if ( function_exists( 'burger_numerology_astroform' ) ) {
+		$section_priority = apply_filters( 'astrocare_section_priority', 12, 'burger_numerology_astroform' );
+		add_action( 'astrocare_sections', 'burger_numerology_astroform', absint( $section_priority ) );
 	}

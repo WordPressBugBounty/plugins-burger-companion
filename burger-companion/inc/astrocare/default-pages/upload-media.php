@@ -1,6 +1,9 @@
 <?php
 $theme = wp_get_theme(); // gets the current theme
-if( 'Astrocare' == $theme->name){
+if( 'Numerology' == $theme->name){
+	$file 		= BURGER_COMPANION_PLUGIN_URL .'inc/numerology/images/header-logo.png';
+	$ImagePath  = BURGER_COMPANION_PLUGIN_URL .'inc/numerology/images';
+}else{
 	$file 		= BURGER_COMPANION_PLUGIN_URL .'inc/astrocare/images/general/header-logo.png';
 	$ImagePath  = BURGER_COMPANION_PLUGIN_URL .'inc/astrocare/images/general';
 }	

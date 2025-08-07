@@ -88,7 +88,52 @@ if ( ! function_exists( 'astrocare_footer_payment_method' ) ) {
 			)
 		);
 	}
+  /*
+	*
+	* Slider Two Default
+	*/
+	function astrocare_get_slider02_default() {
+		return apply_filters(
+			'astrocare_get_slider02_default', json_encode(
+				array(
+					array(
+						'image_url'       => BURGER_COMPANION_PLUGIN_URL . 'inc/astrocare/images/slider/num-slider01.jpg',
+						'image_url2'      => BURGER_COMPANION_PLUGIN_URL . 'inc/astrocare/images/slider/slider01-small.jpg',
+						'title' => __("<h2 class='num_sub_title'>Ask One <span class='ityped text' data-ityped-strings='[\"Free Question!\", \"Paid Question\"]'></span></h2>", 'astrocare'),
 
+						'subtitle'        => esc_html__( 'Numerology', 'astrocare' ),
+						'text'            => esc_html__( 'Personalized Numbers-Based Report Crafted with Insights from Our Expert Numerologists
+							', 'astrocare' ),
+						'text2'	          =>  esc_html__( 'Registration Now', 'astrocare' ),
+						'link'	          =>  esc_html__( '#', 'astrocare' ),
+						'id'              => 'customizer_repeater_slider02_001',
+					),
+					array(
+						'image_url'       => BURGER_COMPANION_PLUGIN_URL . 'inc/astrocare/images/slider/num-slider01.jpg',
+						'image_url2'      => BURGER_COMPANION_PLUGIN_URL . 'inc/astrocare/images/slider/slider01-small.jpg',
+						'title' => __("<h2 class='num_sub_title'>Ask One <span class='ityped text' data-ityped-strings='[\"Free Question!\", \"Paid Question\"]'></span></h2>", 'astrocare'),
+						'subtitle'        => esc_html__( 'Numerology', 'astrocare' ),
+						'text'            => esc_html__( 'Personalized Numbers-Based Report Crafted with Insights from Our Expert Numerologists
+							', 'astrocare' ),
+						'text2'	          =>  esc_html__( 'Registration Now', 'astrocare' ),
+						'link'	          =>  esc_html__( '#', 'astrocare' ),
+						'id'              => 'customizer_repeater_slider02_002',
+					),
+					array(
+						'image_url'       => BURGER_COMPANION_PLUGIN_URL . 'inc/astrocare/images/slider/num-slider01.jpg',
+						'image_url2'      => BURGER_COMPANION_PLUGIN_URL . 'inc/astrocare/images/slider/slider01-small.jpg',
+						'title' => __("<h2 class='num_sub_title'>Ask One <span class='ityped text' data-ityped-strings='[\"Free Question!\", \"Paid Question\"]'></span></h2>", 'astrocare'),
+						'subtitle'        => esc_html__( 'Numerology', 'astrocare' ),
+						'text'            => esc_html__( 'Personalized Numbers-Based Report Crafted with Insights from Our Expert Numerologists
+							', 'astrocare' ),
+						'text2'	          =>  esc_html__( 'Registration Now', 'astrocare' ),
+						'link'	          =>  esc_html__( '#', 'astrocare' ),
+						'id'              => 'customizer_repeater_slider02_003',
+					)
+				)
+			)
+		);
+	}
    /*
 	*
 	* Service Default

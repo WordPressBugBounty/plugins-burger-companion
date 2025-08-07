@@ -50,34 +50,19 @@ if ( ! function_exists( 'burger_astrocare_kundli' ) ) :
 													</div>
 												<?php endif; ?>
 
-												<?php if($hs_clipart == '1') : ?>
-													<span class="ring1 animate-v2">
-														<img src="<?php echo esc_url(BURGER_COMPANION_PLUGIN_URL .'inc/astrocare/images/kundli/shape-01.png'); ?>" alt="shape-01">
-													</span>
-													<span class="ring2 animate-v3">
-														<img src="<?php echo esc_url(BURGER_COMPANION_PLUGIN_URL .'inc/astrocare/images/kundli/shape-02.png'); ?>" alt="shape-02">
-													</span>
-													<span class="ring3 animate-v2">
-														<img src="<?php echo esc_url(BURGER_COMPANION_PLUGIN_URL .'inc/astrocare/images/kundli/shape-03.png'); ?>" alt="shape-03">
-													</span>
-													<span class="ring4 animate-v3">
-														<img src="<?php echo esc_url(BURGER_COMPANION_PLUGIN_URL .'inc/astrocare/images/kundli/shape-04.png'); ?>" alt="shape-04">
-													</span>
-													<span class="ring5 animate-v2">
-														<img src="<?php echo esc_url(BURGER_COMPANION_PLUGIN_URL .'inc/astrocare/images/kundli/shape-05.png'); ?>" alt="shape-05">
-													</span>
-													<span class="ring6 animate-v3">
-														<img src="<?php echo esc_url(BURGER_COMPANION_PLUGIN_URL .'inc/astrocare/images/kundli/shape-06.png'); ?>" alt="shape-06">
-													</span>
-													<span class="ring7 animate-v2">
-														<img src="<?php echo esc_url(BURGER_COMPANION_PLUGIN_URL .'inc/astrocare/images/kundli/shape-07.png'); ?>" alt="shape-07">
-													</span>
-													<span class="ring8 animate-v3">
-														<img src="<?php echo esc_url(BURGER_COMPANION_PLUGIN_URL .'inc/astrocare/images/kundli/shape-08.png'); ?>" alt="shape-08">
-													</span>
-													<span class="ring9 animate-v2">
-														<img src="<?php echo esc_url(BURGER_COMPANION_PLUGIN_URL .'inc/astrocare/images/kundli/shape-09.png'); ?>" alt="shape-09">
-													</span>
+												<?php if($hs_clipart == '1') : 
+													$astrocare_slug = basename( get_stylesheet_directory() );
+													$astrocare_path = BURGER_COMPANION_PLUGIN_URL . 'inc/' . $astrocare_slug . '/images/kundli/';
+													for ( $astrocare_i = 1; $astrocare_i <= 9; $astrocare_i++ ) {
+														$astrocare_ring_class = 'ring' . $astrocare_i;
+														$astrocare_animation_class = ($astrocare_i % 2 === 0) ? 'animate-v3' : 'animate-v2';
+														$astrocare_image_url = esc_url( $astrocare_path . 'shape-0' . $astrocare_i . '.png' );
+														$astrocare_alt_text = 'shape-0' . $astrocare_i;
+														?>
+														<span class="<?php echo esc_attr($astrocare_ring_class . ' ' . $astrocare_animation_class); ?>">
+															<img src="<?php echo $astrocare_image_url; ?>" alt="<?php echo esc_attr($astrocare_alt_text); ?>">
+														</span>
+													<?php } ?>
 												<?php endif; ?>
 											</div>
 										</div>
