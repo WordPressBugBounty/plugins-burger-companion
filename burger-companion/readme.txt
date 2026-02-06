@@ -2,9 +2,9 @@
 Contributors: burgersoftware
 Tags: spintech
 Requires at least: 4.0
-Tested up to: 6.8
+Tested up to: 6.9
 Requires PHP: 5.6
-Stable tag: 7.7
+Stable tag: 7.9
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -31,6 +31,13 @@ Burger Companion WordPress plugin is licensed under the GPL3 (https://www.gnu.or
 
 
 == Changelog ==
+
+= 7.9 =
+* StoreX Theme Files Updated
+
+= 7.8 =
+* StoreX Theme Files Added
+* Tested by WordPress 6.9
 
 = 7.7 =
 * Numerology Theme Files Added

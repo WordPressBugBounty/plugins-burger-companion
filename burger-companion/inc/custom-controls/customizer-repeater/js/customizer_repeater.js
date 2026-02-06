@@ -1354,7 +1354,50 @@ if(jQuery('#exist_burger_companion_Hotel_Galaxy_footerbottom, #exist_burger_comp
    jQuery('#exist_burger_companion_Hotel_Galaxy_footerbottom, #exist_burger_companion_HotelPress_footerbottom').val(new_service_add_val);  
 }
 }
+// StoreX
+if(split_add_more_button_split=="Add New Slid")
+{
 
+ if(jQuery('#exist_burger_companion_StoreX_Slider').val()>=2)
+ {
+   jQuery(".customizer_StoreX_slider_upgrade_section").show();
+   return false;   
+}
+if(jQuery('#exist_burger_companion_StoreX_Slider').val()<2)
+{
+   var new_service_add_val=parseInt(jQuery('#exist_burger_companion_StoreX_Slider').val())+1;
+   jQuery('#exist_burger_companion_StoreX_Slider').val(new_service_add_val);  
+}
+}
+if(split_add_more_button_split=="Add New Info")
+{
+
+ if(jQuery('#exist_burger_companion_StoreX_Information').val()>=3)
+ {
+   jQuery(".customizer_StoreX_info_upgrade_section").show();
+   return false;   
+}
+if(jQuery('#exist_burger_companion_StoreX_Information').val()<3)
+{
+   var new_service_add_val=parseInt(jQuery('#exist_burger_companion_StoreX_Information').val())+1;
+   jQuery('#exist_burger_companion_StoreX_Information').val(new_service_add_val);  
+}
+}
+
+if(split_add_more_button_split=="Add New Foot")
+{
+
+ if(jQuery('#exist_burger_companion_StoreX_FooterCard').val()>=6)
+ {
+   jQuery(".customizer_StoreX_FooterCard_upgrade_section").show();
+   return false;   
+}
+if(jQuery('#exist_burger_companion_StoreX_FooterCard').val()<6)
+{
+   var new_service_add_val=parseInt(jQuery('#exist_burger_companion_StoreX_FooterCard').val())+1;
+   jQuery('#exist_burger_companion_StoreX_FooterCard').val(new_service_add_val);  
+}
+}
 
 if (typeof th !== 'undefined') {
             /* Clone the first box*/
@@ -1849,6 +1892,20 @@ if(split_delete_button_split=="Delete Servi")
 if(split_delete_button_split=="Delete foote")
 {
     console.log( jQuery('#exist_burger_companion_Hotel_Galaxy_footerbottom, #exist_burger_companion_HotelPress_footerbottom').val(parseInt(jQuery('#exist_burger_companion_Hotel_Galaxy_footerbottom, #exist_burger_companion_HotelPress_footerbottom').val())-1));  
+}
+// StoreX
+if(split_delete_button_split=="Delete Slide")
+{
+    console.log( jQuery('#exist_burger_companion_StoreX_Slider').val(parseInt(jQuery('#exist_burger_companion_StoreX_Slider').val())-1));  
+}
+if(split_delete_button_split=="Delete Infor")
+{
+    console.log( jQuery('#exist_burger_companion_StoreX_Information').val(parseInt(jQuery('#exist_burger_companion_StoreX_Information').val())-1));  
+}
+
+if(split_delete_button_split=="Delete Foote")
+{
+    console.log( jQuery('#exist_burger_companion_StoreX_FooterCard').val(parseInt(jQuery('#exist_burger_companion_StoreX_FooterCard').val())-1));  
 }
 
 });

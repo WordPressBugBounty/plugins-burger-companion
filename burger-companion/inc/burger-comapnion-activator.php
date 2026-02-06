@@ -97,6 +97,12 @@ class Burger_Companion_Activator {
 				require BURGER_COMPANION_PLUGIN_DIR . 'inc/hotel-galaxy/default-pages/room-post.php';				
 				require BURGER_COMPANION_PLUGIN_DIR . 'inc/hotel-galaxy/default-widgets/default-widget.php';
 			}
+
+			if ( 'StoreX' == $theme->name ){
+				require BURGER_COMPANION_PLUGIN_DIR . 'inc/storex/default-pages/upload-media.php';
+				require BURGER_COMPANION_PLUGIN_DIR . 'inc/storex/default-pages/home-page.php';
+				require BURGER_COMPANION_PLUGIN_DIR . 'inc/storex/default-widgets/default-widget.php';
+			}
 			
 			update_option( 'item_details_page', 'Done' );
 		}
