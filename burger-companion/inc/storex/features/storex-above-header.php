@@ -5,7 +5,7 @@ $selective_refresh = isset( $wp_customize->selective_refresh ) ? 'postMessage' :
 	Header Settings Panel
 	=========================================*/
 	$wp_customize->add_panel( 
-		'header_section', 
+		'storex_header_section', 
 		array(
 			'priority'      => 2,
 			'capability'    => 'edit_theme_options',
@@ -47,7 +47,7 @@ $selective_refresh = isset( $wp_customize->selective_refresh ) ? 'postMessage' :
         array(
         	'priority'      => 2,
             'title' 		=> __('Above Header','storex'),
-			'panel'  		=> 'header_section',
+			'panel'  		=> 'storex_header_section',
 		)
     );
 

@@ -23,11 +23,11 @@ if ( ! function_exists( 'burger_astrocare_horoscope' ) ) :
 						</div>
 					</div>
 					<div class="row row-cols-xl-1 row-cols-lg-1 row-cols-md-1 row-cols-sm-1 row-cols-1">
-						<?php if( in_array( 'vedicastroapi/vedic-astro-api.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) { 
+						<?php if (class_exists('JyotishamAstroAPI')) {
 
-							echo do_shortcode('[vedicastro-prediction-shortcode]'); 
+							echo do_shortcode('[jyotisham_horoscope]'); 
 						}else{
-							echo wp_kses_post("<p class='text-center'>Install and activate <strong>VedicAstroAPI</strong> plugin for Horoscope.</p>");
+							echo wp_kses_post("<p class='text-center'>Install and activate <strong>Astro API By Synilogic</strong> plugin for Horoscope.</p>");
 						} ?>
 					</div>    
 				</div>

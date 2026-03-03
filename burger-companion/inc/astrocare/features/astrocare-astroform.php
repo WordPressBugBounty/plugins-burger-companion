@@ -54,7 +54,7 @@ function astrocare_astroform_setting( $wp_customize ) {
 	$wp_customize->add_setting(
 		'astroform_title',
 		array(
-			'default'			=> __('Know Your Moon Sign','astrocare'),
+			'default'			=> __('Get Your Sade Sati Report','astrocare'),
 			'capability'     	=> 'edit_theme_options',
 			'sanitize_callback' => 'astrocare_sanitize_html',
 			'transport'         => $selective_refresh,

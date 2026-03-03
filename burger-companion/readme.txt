@@ -4,7 +4,7 @@ Tags: spintech
 Requires at least: 4.0
 Tested up to: 6.9
 Requires PHP: 5.6
-Stable tag: 7.9
+Stable tag: 7.10
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -31,6 +31,9 @@ Burger Companion WordPress plugin is licensed under the GPL3 (https://www.gnu.or
 
 
 == Changelog ==
+
+= 7.10 =
+* Astrocare Theme Files code Updated
 
 = 7.9 =
 * StoreX Theme Files Updated

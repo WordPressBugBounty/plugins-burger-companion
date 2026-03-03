@@ -16,7 +16,7 @@ function storex_bottom_footer_settings( $wp_customize ) {
 		array(
 			'type' => 'hidden',
 			'label' => __('Footer Card','storex'),
-			'section' => 'footer_bottom',
+			'section' => 'storex_footer_bottom',
 			'priority' => 5,
 		)
 	);
@@ -34,7 +34,7 @@ function storex_bottom_footer_settings( $wp_customize ) {
 		'hide_show_footer_card', 
 		array(
 			'label'	      => esc_html__( 'Hide/Show', 'storex' ),
-			'section'     => 'footer_bottom',
+			'section'     => 'storex_footer_bottom',
 			'type'        => 'checkbox',
 			'priority'      => 6,
 		) 
@@ -54,7 +54,7 @@ function storex_bottom_footer_settings( $wp_customize ) {
 			'footer_card_content', 
 			array(
 				'label'   => esc_html__('FooterCard','storex'),
-				'section' => 'footer_bottom',
+				'section' => 'storex_footer_bottom',
 				'priority' => 7,
 				'add_field_label'                   => esc_html__( 'Add New FooterCard', 'storex' ),
 				'item_name'                         => esc_html__( 'FooterCard', 'storex' ),
@@ -85,7 +85,7 @@ function storex_bottom_footer_settings( $wp_customize ) {
 			$wp_customize,
 			'storex_card_upgrade_to_pro',
 			array(
-				'section'				=> 'footer_bottom',
+				'section'				=> 'storex_footer_bottom',
 				'priority' => 7
 			)
 		)

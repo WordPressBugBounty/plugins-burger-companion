@@ -2,7 +2,7 @@
 if ( ! function_exists( 'burger_astrocare_astroform' ) ) :
 	function burger_astrocare_astroform() {
 		$hs_astroform	= get_theme_mod('hs_astroform','1');	
-		$astroform_title = get_theme_mod('astroform_title','Know Your Moon Sign');
+		$astroform_title = get_theme_mod('astroform_title','Get Your Sade Sati Report');
 		if($hs_astroform == '1'){	
 			?>	
 			<section class="ast_searchbox_section ast_astro-slider-form">
@@ -15,11 +15,11 @@ if ( ! function_exists( 'burger_astrocare_astroform' ) ) :
 										<h5 class="theme_title"><?php do_action('astrocare_title_img_seprator'); ?> <?php echo wp_kses_post($astroform_title); ?></h5>
 									<?php endif; ?>
 								</div>
-								<?php if( in_array( 'vedicastroapi/vedic-astro-api.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) { 
+								<?php if (class_exists('JyotishamAstroAPI')) {
 
-									echo do_shortcode('[vedicastro-sade-sati-shortcode]');
+									echo do_shortcode('[jyotisham_sadesati]');
 								}else{
-									echo wp_kses_post("<p class='text-center'>Install and activate <strong>VedicAstroAPI</strong> plugin for Sade Sati Form.</p>");
+									echo wp_kses_post("<p class='text-center'>Install and activate <strong>Astro API By Synilogic</strong> plugin for Sade Sati Form.</p>");
 								} ?>
 							</div>
 						</div>

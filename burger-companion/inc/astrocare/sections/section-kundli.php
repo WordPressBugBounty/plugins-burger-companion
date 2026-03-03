@@ -15,7 +15,7 @@ if ( ! function_exists( 'burger_astrocare_kundli' ) ) :
 						<div class="col-lg-12 col-md-12 col-12 m-auto wow zoomIn">
 							<div class="ast_free_Kundali">
 								<div class="row">
-									<div class="col-lg-6">
+									<div class="col-lg-6 kundli-form">
 										<div class="ast_form_box">
 											<div class="astro_theme_titles">
 
@@ -28,16 +28,16 @@ if ( ! function_exists( 'burger_astrocare_kundli' ) ) :
 												<?php endif; ?>
 											</div>
 											<div class="row">
-												<?php if( in_array( 'vedicastroapi/vedic-astro-api.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) { 
+												<?php if (class_exists('JyotishamAstroAPI')) {
 
-													echo do_shortcode('[vedicastro-kundali-shortcode]');
+													echo do_shortcode('[jyotisham_kundli]');
 												}else{
-													echo wp_kses_post("<p class='text-center'>Install and activate <strong>VedicAstroAPI</strong> plugin for Kundali Form.</p>");
+													echo wp_kses_post("<p class='text-center'>Install and activate <strong>Astro API By Synilogic</strong> plugin for Kundali Form.</p>");
 												} ?>
 											</div>
 										</div>
 									</div>
-									<div class="col-lg-6">
+									<div class="col-lg-6 kundli-animation">
 										<div class="ast_free_Kundali_img ">
 											<div class="hs_waves2">
 												<div class="hs_wave"></div>

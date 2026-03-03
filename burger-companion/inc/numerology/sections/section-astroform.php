@@ -15,11 +15,11 @@ if ( ! function_exists( 'burger_numerology_astroform' ) ) :
 										<h5 class="theme_title"><?php do_action('astrocare_title_img_seprator'); ?> <?php echo wp_kses_post($astroform_title); ?></h5>
 									<?php endif; ?>
 								</div>
-								<?php if( in_array( 'vedicastroapi/vedic-astro-api.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) { 
+								<?php if (class_exists('JyotishamAstroAPI')) {
 
-									echo do_shortcode('[vedicastro-numberology-shortcode]');
+									echo do_shortcode('[jyotisham_numerology]');
 								}else{
-									echo wp_kses_post("<p class='text-center'>Install and activate <strong>VedicAstroAPI</strong> plugin for Numerology Form.</p>");
+									echo wp_kses_post("<p class='text-center'>Install and activate <strong>Astro API By Synilogic</strong> plugin for Numerology Form.</p>");
 								} ?>
 							</div>
 						</div>
