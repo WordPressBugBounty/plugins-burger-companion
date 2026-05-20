@@ -1,6 +1,9 @@
 <?php
 $theme = wp_get_theme(); // gets the current theme
-if( 'StoreX' == $theme->name){
+if( 'StoreCart' == $theme->name){
+	$file 		= BURGER_COMPANION_PLUGIN_URL .'inc/storecart/images/logo.png';
+	$ImagePath  = BURGER_COMPANION_PLUGIN_URL .'inc/storecart/images';
+}else{
 	$file 		= BURGER_COMPANION_PLUGIN_URL .'inc/storex/images/logo.png';
 	$ImagePath  = BURGER_COMPANION_PLUGIN_URL .'inc/storex/images';
 }	

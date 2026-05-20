@@ -1,7 +1,9 @@
 <?php
 $theme = wp_get_theme(); // gets the current theme
 $footer_logo = '';
-if ( 'StoreX' === $theme->name ) {
+if ( 'StoreCart' === $theme->name ) {
+	$footer_logo = BURGER_COMPANION_PLUGIN_URL . 'inc/storecart/images/logo.png';
+}else{
 	$footer_logo = BURGER_COMPANION_PLUGIN_URL . 'inc/storex/images/logo.png';
 }
 $activate = array(

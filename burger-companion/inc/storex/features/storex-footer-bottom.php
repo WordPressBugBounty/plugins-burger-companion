@@ -69,8 +69,9 @@ function storex_bottom_footer_settings( $wp_customize ) {
 	class StoreX_card_section_upgrade extends WP_Customize_Control {
 		public function render_content() { 
 			$theme = wp_get_theme(); // gets the current theme
-			if ( 'StoreX' == $theme->name){
-				?>
+			if ( 'StoreCart' == $theme->name){ ?>
+				<a class="customizer_StoreX_FooterCard_upgrade_section up-to-pro" href="https://burgerthemes.com/storecart-pro/" target="_blank" style="display: none;"><?php _e('More Card Available in StoreCart Pro','storex'); ?></a>
+				<?php }else{ ?> 
 				<a class="customizer_StoreX_FooterCard_upgrade_section up-to-pro" href="https://burgerthemes.com/storex-pro/" target="_blank" style="display: none;"><?php _e('More Card Available in StoreX Pro','storex'); ?></a>
 				<?php
 			}

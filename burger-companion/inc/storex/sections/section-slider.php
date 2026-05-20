@@ -1,9 +1,11 @@
 <?php  
 if ( ! function_exists( 'burger_storex_slider' ) ) :
 	function burger_storex_slider() {
-     $slider = get_theme_mod('slider',storex_get_slider_default());
-     ?>
-     <section class="banner-section p_relative">
+       $slider = get_theme_mod('slider',storex_get_slider_default());
+       $current_theme = wp_get_theme();
+       $theme_name    = $current_theme->get( 'Name' );
+       ?>
+       <section class="banner-section p_relative">
         <div class="banner-carousel owl-theme owl-carousel owl-nav-none dots-style-one">
             <?php
             if ( ! empty( $slider ) ) {
@@ -25,13 +27,16 @@ if ( ! function_exists( 'burger_storex_slider' ) ) :
                     $image = ! empty( $slide_item->image_url ) ? apply_filters( 'storex_translate_single_string', $slide_item->image_url, 'slider section' ) : '';
                     ?>
                     <div class="slide-item p_relative">
-                        <div class="pattern-layer" style="background-image: url('<?php echo esc_url( BURGER_COMPANION_PLUGIN_URL . 'inc/storex/images/slider/shape-2.png'); ?>');"></div>
-                        <?php if ( ! empty( $image ) ) : ?>
+                        <?php if ( 'StoreX' === $theme_name ) { ?>
+                            <div class="pattern-layer" style="background-image: url('<?php echo esc_url( BURGER_COMPANION_PLUGIN_URL . 'inc/storex/images/slider/shape-2.png'); ?>');"></div>
+                        <?php }else{ ?> 
+                             <div class="pattern-layer" style="background-image: url('<?php echo esc_url($image); ?>');"></div>
+                        <?php } ?>
+                            <?php if ( ! empty( $image ) && 'StoreX' === wp_get_theme()->get( 'Name' ) ) : ?>
                             <figure class="image-layer r_95 b_0"><img src="<?php echo esc_url( $image ); ?>" alt="<?php echo esc_attr( $storex_slide_title ); ?>"></figure>
                         <?php endif; ?>
                         <div class="large-container">
                             <div class="content-box">
-
                                 <?php if ( ! empty( $storex_slide_title ) ) : ?>
                                     <span class="upper-text"><?php echo wp_kses(html_entity_decode($storex_slide_title), $allowed_html )?></span>
                                 <?php endif; ?> 

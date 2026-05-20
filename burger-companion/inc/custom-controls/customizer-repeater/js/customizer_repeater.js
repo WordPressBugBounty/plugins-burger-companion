@@ -1358,44 +1358,75 @@ if(jQuery('#exist_burger_companion_Hotel_Galaxy_footerbottom, #exist_burger_comp
 if(split_add_more_button_split=="Add New Slid")
 {
 
- if(jQuery('#exist_burger_companion_StoreX_Slider').val()>=2)
+ if(jQuery('#exist_burger_companion_StoreX_Slider, #exist_burger_companion_StoreCart_Slider').val()>=2)
  {
    jQuery(".customizer_StoreX_slider_upgrade_section").show();
    return false;   
 }
-if(jQuery('#exist_burger_companion_StoreX_Slider').val()<2)
+if(jQuery('#exist_burger_companion_StoreX_Slider, #exist_burger_companion_StoreCart_Slider').val()<2)
 {
-   var new_service_add_val=parseInt(jQuery('#exist_burger_companion_StoreX_Slider').val())+1;
-   jQuery('#exist_burger_companion_StoreX_Slider').val(new_service_add_val);  
+   var new_service_add_val=parseInt(jQuery('#exist_burger_companion_StoreX_Slider, #exist_burger_companion_StoreCart_Slider').val())+1;
+   jQuery('#exist_burger_companion_StoreX_Slider, #exist_burger_companion_StoreCart_Slider').val(new_service_add_val);  
 }
 }
+
 if(split_add_more_button_split=="Add New Info")
 {
 
- if(jQuery('#exist_burger_companion_StoreX_Information').val()>=3)
+ if(jQuery('#exist_burger_companion_StoreX_Information, #exist_burger_companion_StoreCart_Information').val()>=3)
  {
    jQuery(".customizer_StoreX_info_upgrade_section").show();
    return false;   
 }
-if(jQuery('#exist_burger_companion_StoreX_Information').val()<3)
+if(jQuery('#exist_burger_companion_StoreX_Information, #exist_burger_companion_StoreCart_Information').val()<3)
 {
-   var new_service_add_val=parseInt(jQuery('#exist_burger_companion_StoreX_Information').val())+1;
-   jQuery('#exist_burger_companion_StoreX_Information').val(new_service_add_val);  
+   var new_service_add_val=parseInt(jQuery('#exist_burger_companion_StoreX_Information, #exist_burger_companion_StoreCart_Information').val())+1;
+   jQuery('#exist_burger_companion_StoreX_Information, #exist_burger_companion_StoreCart_Information').val(new_service_add_val);  
 }
 }
 
 if(split_add_more_button_split=="Add New Foot")
 {
 
- if(jQuery('#exist_burger_companion_StoreX_FooterCard').val()>=6)
+ if(jQuery('#exist_burger_companion_StoreX_FooterCard, #exist_burger_companion_StoreCart_FooterCard').val()>=6)
  {
    jQuery(".customizer_StoreX_FooterCard_upgrade_section").show();
    return false;   
 }
-if(jQuery('#exist_burger_companion_StoreX_FooterCard').val()<6)
+if(jQuery('#exist_burger_companion_StoreX_FooterCard, #exist_burger_companion_StoreCart_FooterCard').val()<6)
 {
-   var new_service_add_val=parseInt(jQuery('#exist_burger_companion_StoreX_FooterCard').val())+1;
-   jQuery('#exist_burger_companion_StoreX_FooterCard').val(new_service_add_val);  
+   var new_service_add_val=parseInt(jQuery('#exist_burger_companion_StoreX_FooterCard, #exist_burger_companion_StoreCart_FooterCard').val())+1;
+   jQuery('#exist_burger_companion_StoreX_FooterCard, #exist_burger_companion_StoreCart_FooterCard').val(new_service_add_val);  
+}
+}
+
+if(split_add_more_button_split=="Add New Cont")
+{
+
+ if(jQuery('#exist_burger_companion_StoreCart_Content_top').val()>=2)
+ {
+   jQuery(".customizer_StoreCart_ab_hea_top_upgrade_section").show();
+   return false;   
+}
+if(jQuery('#exist_burger_companion_StoreCart_Content_top').val()<2)
+{
+   var new_service_add_val=parseInt(jQuery('#exist_burger_companion_StoreCart_Content_top').val())+1;
+   jQuery('#exist_burger_companion_StoreCart_Content_top').val(new_service_add_val);  
+}
+}
+
+if(split_add_more_button_split=="Add New Soci")
+{
+
+ if(jQuery('#exist_burger_companion_StoreCart_Social').val()>=4)
+ {
+   jQuery(".customizer_StoreCart_social_upgrade_section").show();
+   return false;   
+}
+if(jQuery('#exist_burger_companion_StoreCart_Social').val()<4)
+{
+   var new_service_add_val=parseInt(jQuery('#exist_burger_companion_StoreCart_Social').val())+1;
+   jQuery('#exist_burger_companion_StoreCart_Social').val(new_service_add_val);  
 }
 }
 
@@ -1896,18 +1927,27 @@ if(split_delete_button_split=="Delete foote")
 // StoreX
 if(split_delete_button_split=="Delete Slide")
 {
-    console.log( jQuery('#exist_burger_companion_StoreX_Slider').val(parseInt(jQuery('#exist_burger_companion_StoreX_Slider').val())-1));  
+    console.log( jQuery('#exist_burger_companion_StoreX_Slider, #exist_burger_companion_StoreCart_Slider').val(parseInt(jQuery('#exist_burger_companion_StoreX_Slider, #exist_burger_companion_StoreCart_Slider').val())-1));  
 }
 if(split_delete_button_split=="Delete Infor")
 {
-    console.log( jQuery('#exist_burger_companion_StoreX_Information').val(parseInt(jQuery('#exist_burger_companion_StoreX_Information').val())-1));  
+    console.log( jQuery('#exist_burger_companion_StoreX_Information, #exist_burger_companion_StoreCart_Information').val(parseInt(jQuery('#exist_burger_companion_StoreX_Information, #exist_burger_companion_StoreCart_Information').val())-1));  
 }
 
 if(split_delete_button_split=="Delete Foote")
 {
-    console.log( jQuery('#exist_burger_companion_StoreX_FooterCard').val(parseInt(jQuery('#exist_burger_companion_StoreX_FooterCard').val())-1));  
+    console.log( jQuery('#exist_burger_companion_StoreX_FooterCard, #exist_burger_companion_StoreCart_FooterCard').val(parseInt(jQuery('#exist_burger_companion_StoreX_FooterCard, #exist_burger_companion_StoreCart_FooterCard').val())-1));  
 }
 
+if(split_delete_button_split=="Delete Conte")
+{
+    console.log( jQuery('#exist_burger_companion_StoreCart_Content_top').val(parseInt(jQuery('#exist_burger_companion_StoreCart_Content_top').val())-1));  
+}
+
+if(split_delete_button_split=="Delete Socia")
+{
+    console.log( jQuery('#exist_burger_companion_StoreCart_Social').val(parseInt(jQuery('#exist_burger_companion_StoreCart_Social').val())-1));  
+}
 });
 }
 return false;

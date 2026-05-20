@@ -21,7 +21,6 @@ function storex_slider_setting( $wp_customize ) {
 			'priority' => 2,
 		)
 	);
-
 	$wp_customize->add_control(
 		'slider_content_head',
 		array(
@@ -65,11 +64,12 @@ function storex_slider_setting( $wp_customize ) {
 	class StoreX_slider_section_upgrade extends WP_Customize_Control {
 		public function render_content() { 
 			$theme = wp_get_theme(); // gets the current theme
-			if ( 'StoreX' == $theme->name){
+			if ( 'StoreCart' == $theme->name){
 				?>
-				<a class="customizer_StoreX_slider_upgrade_section up-to-pro" href="https://burgerthemes.com/storex-pro/" target="_blank" style="display: none;"><?php _e('More Slides Available in StoreX Pro','storex'); ?></a>
-				<?php
-			}
+				<a class="customizer_StoreX_slider_upgrade_section up-to-pro" href="https://burgerthemes.com/storecart-pro/" target="_blank" style="display: none;"><?php _e('More Slides Available in StoreCart Pro','storex'); ?></a>
+				<?php }else{ ?> 	
+					<a class="customizer_StoreX_slider_upgrade_section up-to-pro" href="https://burgerthemes.com/storex-pro/" target="_blank" style="display: none;"><?php _e('More Slides Available in StoreX Pro','storex'); ?></a>
+			<?php }
 		}
 	}
 	$wp_customize->add_setting( 'storex_slider_upgrade_to_pro', array(
